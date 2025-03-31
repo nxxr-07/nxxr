@@ -3,6 +3,56 @@
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hero.css') }}">
+
+    <style>
+        .project-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            margin-bottom: 0;
+            padding: 0 20px;
+        }
+
+        .project-row {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            background: #121212;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .project-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-image,
+        .project-details {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .project-image img {
+            max-height: 600px;
+            
+            width: 100%;
+            border-radius: 10px;
+            object-fit: scale-down;
+        }
+
+        .project-details h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #f5f5f7;
+        }
+
+        .project-details p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+    </style>
+
 {% endblock %}
 
 {% block content %}
@@ -14,6 +64,42 @@
         <div class="scroll-down">
             <span>Projects</span>
             <span class="arrow">&#x2193;</span>
+        </div>
+    </section>
+    <section class="project">
+        <div class="project-container">
+            <!-- Project 1: Image left -->
+            <div class="project-row">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='/project/project1.png') }}" alt="Spaces">
+                </div>
+                <div class="project-details">
+                    <h3>Spaces</h3>
+                    <p>A creative approach to Study-Room Booking System - Using Kotlin and Jetapck compose</p>
+                </div>
+            </div>
+
+            <!-- Project 2: Image right (reverse layout) -->
+            <div class="project-row reverse">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='/project/project2.jpg') }}" alt="BookShelf">
+                </div>
+                <div class="project-details">
+                    <h3>BookShelf</h3>
+                    <p>A Book Library App built using Firebase, where authenticated (firebaseAuth) users can upload/download PDFs.</p>
+                </div>
+            </div>
+
+            <!-- Project 3: Image left -->
+            <div class="project-row">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='/project/project3.png') }}" alt="ThirtyDaysOfInvesting Tips App">
+                </div>
+                <div class="project-details">
+                    <h3>ThirtyDaysOfInvesting Tips App</h3>
+                    <p>Self Learning Google Developers Course Project - To understand the basics of Android development (scrollable list, activity lifecycle, material design, animations, etc.)</p>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}
