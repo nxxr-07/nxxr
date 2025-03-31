@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from Website.routes import main
+import os
 
 app = Flask(__name__, template_folder='Website/templates', static_folder='Website/static')
 
