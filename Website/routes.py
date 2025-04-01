@@ -12,4 +12,4 @@ def about():
 
 @main.route('/resume')
 def resume():
-    return redirect ("https://drive.google.com/file/d/1ZKzG_3byftGoxfwQKAaw_7Ku-RP56Dot/view?usp=sharing")
+    return redirect ("https://drive.google.com/file/d/1o5TbsawU-cI3xvSwLDO7v5w1IZIHWpld/view?usp=sharing")
