@@ -1,105 +1,186 @@
 {% extends "base.html" %}
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hero.css') }}">
-
-    <style>
-        .project-container {
-            max-width: 1200px;
-            margin: 60px auto;
-            margin-bottom: 0;
-            padding: 0 20px;
-        }
-
-        .project-row {
-            display: flex;
-            align-items: center;
-            margin: 40px 0;
-            background: #121212;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-
-        .project-row.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .project-image,
-        .project-details {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .project-image img {
-            max-height: 600px;
-            
-            width: 100%;
-            border-radius: 10px;
-            object-fit: scale-down;
-        }
-
-        .project-details h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #f5f5f7;
-        }
-
-        .project-details p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #ccc;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tech.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='exp.css') }}">
+    
 
 {% endblock %}
 
 {% block content %}
-    <section class="hero">
-        <div class="hero-content">
-            <img src="{{ url_for('static', filename='android.svg') }}" alt="">
-            <h1><i> Arshnoor </i></h1>
+<div class="two-column-container">
+    <!-- Left -->
+    <div class="left-column">
+        
+        <div class="about-text">
+            <h1> <i> Arshnoor </i></h1>
+            <h6> 📍 Punjab, India</h6>
         </div>
-        <div class="scroll-down">
-            <span>Projects</span>
-            <span class="arrow">&#x2193;</span>
+
+        <div class="about-image">
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Arshnoor">
         </div>
-    </section>
-    <section class="project">
-        <div class="project-container">
-            <!-- Project 1: Image left -->
-            <div class="project-row">
-                <div class="project-image">
-                    <img src="{{ url_for('static', filename='/project/project1.png') }}" alt="Spaces">
-                </div>
-                <div class="project-details">
-                    <h3>Spaces</h3>
-                    <p>A creative approach to Study-Room Booking System - Using Kotlin and Jetapck compose</p>
+        
+        
+
+        <ul class="profile-links">
+    <li class="link">
+        <img src="{{ url_for('static', filename='tech-icons/email.svg') }}" alt="mail icon" class="link-icon">
+        <a href="mailto:arshnoorb7@gmail.com">Email</a>
+    </li>
+    <li class="link">
+        <img src="{{ url_for('static', filename='tech-icons/linkedin.svg') }}" alt="Linkedin icon" class="link-icon">
+        <a href="https://linkedin.com/in/arshnxxr" target="_blank">LinkedIn</a>
+    </li>
+    <li class="link">
+        <img src="{{ url_for('static', filename='tech-icons/github.svg') }}" alt="Github icon" class="link-icon">
+        <a href="https://github.com/nxxr-07" target="_blank">GitHub</a>
+    </li>
+</ul>
+    </div>
+    <!-- Right -->
+    <div class="right-column">
+        <section>
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-marquee">
+            <!-- First row -->
+            <div class="marquee-row">
+                <div class="marquee-content">
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/kotlin.svg') }}" alt="Kotlin" />
+                        <span>Kotlin</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/java.svg') }}" alt="Java" />
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/python.svg') }}" alt="Python" />
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/firebase.svg') }}" alt="Firebase" />
+                        <span>Firebase</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/flask.svg') }}" alt="Flask" />
+                        <span>Flask</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/kotlin.svg') }}" alt="Kotlin" />
+                        <span>Kotlin</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/java.svg') }}" alt="Java" />
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/python.svg') }}" alt="Python" />
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/firebase.svg') }}" alt="Firebase" />
+                        <span>Firebase</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/flask.svg') }}" alt="Flask" />
+                        <span>Flask</span>
+                    </div>
                 </div>
             </div>
+            <!-- Second row (reverse direction) -->
+            <div class="marquee-row">
+                <div class="marquee-content reverse">
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/springboot.svg') }}" alt="Sprin Boot" />
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/github.svg') }}" alt="Github" />
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/jetpack-compose.svg') }}" alt="Jetpack Compose" />
+                        <span>Jetpack Compose</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/figma.svg') }}" alt="Figma" />
+                        <span>Figma</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/material-design.svg') }}" alt="Material Design" />
+                        <span>Material Design</span>
+                    </div>
 
-            <!-- Project 2: Image right (reverse layout) -->
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/springboot.svg') }}" alt="Sprin Boot" />
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/github.svg') }}" alt="Github" />
+                        <span>GitHub</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h3>Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Java Developer Intern</h4>
+                        <span class="timeline-company">CodVeda Technologies Pvt. Ltd. <span class="timeline-date">2025</span></span>
+                        <p>Practical Hands-On Serveral Java Projects</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Android Developer Intern</h4>
+                        <span class="timeline-company">Novem Controls Pvt. Ltd. <span class="timeline-date">2024</span></span>
+                        <p>Contributed to the Almanac Project - College Buddy App.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects -->
+        <section>
+            <h3>Projects</h3>
+            <div class="project-row">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project/project1.jpg') }}" alt="Spaces">
+                </div>
+                <div class="project-details">
+                    <h4>Spaces</h4>
+                    <p>A creative approach to Study-Room Booking System - Using Kotlin and Jetpack compose</p>
+                </div>
+            </div>
             <div class="project-row reverse">
                 <div class="project-image">
-                    <img src="{{ url_for('static', filename='/project/project2.jpg') }}" alt="BookShelf">
+                    <img src="{{ url_for('static', filename='project/project2.jpg') }}" alt="BookShelf">
                 </div>
                 <div class="project-details">
-                    <h3>BookShelf</h3>
-                    <p>A Book Library App built using Firebase, where authenticated (firebaseAuth) users can upload/download PDFs.</p>
+                    <h4>BookShelf</h4>
+                    <p>A Book Library App built using Firebase, where authenticated users can upload/download PDFs.</p>
                 </div>
             </div>
-
-            <!-- Project 3: Image left -->
             <div class="project-row">
                 <div class="project-image">
-                    <img src="{{ url_for('static', filename='/project/project3.png') }}" alt="ThirtyDaysOfInvesting Tips App">
+                    <img src="{{ url_for('static', filename='project/project3.png') }}" alt="ThirtyDaysOfInvesting Tips App">
                 </div>
                 <div class="project-details">
-                    <h3>ThirtyDaysOfInvesting Tips App</h3>
-                    <p>Self Learning Google Developers Course Project - To understand the basics of Android development (scrollable list, activity lifecycle, material design, animations, etc.)</p>
+                    <h4>ThirtyDaysOfInvesting Tips App</h4>
+                    <p>Self Learning Google Developers Course Project - To understand the basics of Android development.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+</div>
 {% endblock %}

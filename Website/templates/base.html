@@ -9,31 +9,10 @@
     {% endblock %}
 </head>
 <body>
-    <header>
-        <span class="brand-name">nxxr</span>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('main.index') }}">Build</a></li>
-                <li><a href="{{ url_for('main.about') }}">About</a></li>
-                <li><a href="{{ url_for('main.resume') }}">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <main>
         {% block content %}
 
         {% endblock %}
     </main>
-
-    <footer>
-        <p>&copy; 2025 Arshnoor</p>
-        <div id="footer-links" >
-            <p>Arshnoor</p>
-            <a href="https://www.linkedin.com/in/arshnxxr">LinkedIn</a>
-            <a href="https://github.com/nxxr-07">GitHub</a>
-            <p>arshnoorb7@gmail.com</p>
-        </div>
-        
-    </footer>
 </html>

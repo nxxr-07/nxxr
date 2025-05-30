@@ -1,0 +1,53 @@
+/* Tech Stack */
+.tech-stack-marquee {
+    overflow: hidden;
+    width: 100%;
+    background: transparent;
+    margin: 20px 0;
+    height: 120px; /* doubled for two rows */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.marquee-row {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: marquee 18s linear infinite;
+    width: max-content;
+}
+
+.marquee-content.reverse {
+    animation-direction: reverse;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.tech-item img {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: var(--white);
+    padding: 4px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
