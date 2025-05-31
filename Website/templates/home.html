@@ -18,8 +18,17 @@
             <h6> 📍 Punjab, India</h6>
         </div>
 
-        <div class="about-image">
+        <div class="about-image-container">
+            <div class="about-image">
                 <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Arshnoor">
+                <div class="about-image-info">
+                    <p>
+                        Hi, I'm Arshnoor.<br>
+                        Passionate developer & lifelong learner.<br>
+                        Love Android, Python, and building cool stuff!
+                    </p>
+                </div>
+            </div>
         </div>
         
         
@@ -43,10 +52,12 @@
     <div class="right-column">
         <section>
             <h3>Tech Stack</h3>
+            
             <div class="tech-stack-marquee">
             <!-- First row -->
             <div class="marquee-row">
                 <div class="marquee-content">
+                
                     <div class="tech-item">
                         <img src="{{ url_for('static', filename='tech-icons/kotlin.svg') }}" alt="Kotlin" />
                         <span>Kotlin</span>
@@ -68,6 +79,10 @@
                         <span>Flask</span>
                     </div>
                     <!-- Duplicate for seamless loop -->
+                     <div class="tech-item">
+                        <img src="{{ url_for('static', filename='tech-icons/api.svg') }}" alt="REST API" />
+                        <span>REST APIs</span>
+                    </div>
                     <div class="tech-item">
                         <img src="{{ url_for('static', filename='tech-icons/kotlin.svg') }}" alt="Kotlin" />
                         <span>Kotlin</span>
@@ -94,7 +109,7 @@
             <div class="marquee-row">
                 <div class="marquee-content reverse">
                     <div class="tech-item">
-                        <img src="{{ url_for('static', filename='tech-icons/springboot.svg') }}" alt="Sprin Boot" />
+                        <img src="{{ url_for('static', filename='tech-icons/spring-boot.svg') }}" alt="Sprin Boot" />
                         <span>Spring Boot</span>
                     </div>
                     <div class="tech-item">
@@ -115,7 +130,7 @@
                     </div>
 
                     <div class="tech-item">
-                        <img src="{{ url_for('static', filename='tech-icons/springboot.svg') }}" alt="Sprin Boot" />
+                        <img src="{{ url_for('static', filename='tech-icons/spring-boot.svg') }}" alt="Sprin Boot" />
                         <span>Spring Boot</span>
                     </div>
                     <div class="tech-item">
@@ -124,6 +139,7 @@
                     </div>
                     
                 </div>
+                
             </div>
         </section>
 
@@ -158,8 +174,14 @@
                     <img src="{{ url_for('static', filename='project/project1.jpg') }}" alt="Spaces">
                 </div>
                 <div class="project-details">
+                    <div class="project-details-text">
                     <h4>Spaces</h4>
                     <p>A creative approach to Study-Room Booking System - Using Kotlin and Jetpack compose</p>
+                    </div>
+
+                    <div class="project-details-btn">
+                        <a href="https://github.com/nxxr-07/spaces" class="button">GitHub → </a>
+                    </div>
                 </div>
             </div>
             <div class="project-row reverse">
@@ -167,8 +189,13 @@
                     <img src="{{ url_for('static', filename='project/project2.jpg') }}" alt="BookShelf">
                 </div>
                 <div class="project-details">
-                    <h4>BookShelf</h4>
-                    <p>A Book Library App built using Firebase, where authenticated users can upload/download PDFs.</p>
+                    <div class="project-details-text">
+                        <h4>BookShelf</h4>
+                        <p>A Book Library App built using Firebase, where authenticated users can upload/download PDFs.</p>
+                    </div>
+                    <div class="project-details-btn">
+                        <a href="https://github.com/nxxr-07/boolshelf" class="button">GitHub → </a>
+                    </div>
                 </div>
             </div>
             <div class="project-row">
@@ -176,11 +203,89 @@
                     <img src="{{ url_for('static', filename='project/project3.png') }}" alt="ThirtyDaysOfInvesting Tips App">
                 </div>
                 <div class="project-details">
-                    <h4>ThirtyDaysOfInvesting Tips App</h4>
-                    <p>Self Learning Google Developers Course Project - To understand the basics of Android development.</p>
+                    <div class="project-details-text">
+                        <h4>Quiz-Master Web App</h4>
+                        <p>A multi-user quiz platform for admins to manage quizzes and users to attempt them and track progress.</p>
+                    </div>
+                    <div class="project-details-btn">
+                        <a href="https://github.com/nxxr-07/Quiz-Master" class="button">GitHub → </a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 </div>
+
+
+<!-- Tech Stack Modal -->
+<div id="techStackModal" class="modal">
+  <div class="modal-content">
+    <h2>My Tech Stack</h2>
+    
+    <div class="modal-tech-grid">
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/kotlin.svg') }}" alt="Kotlin" />
+        <span>Kotlin</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/java.svg') }}" alt="Java" />
+        <span>Java</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/python.svg') }}" alt="Python" />
+        <span>Python</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/firebase.svg') }}" alt="Firebase" />
+        <span>Firebase</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/flask.svg') }}" alt="Flask" />
+        <span>Flask</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/spring-boot.svg') }}" alt="Spring Boot" />
+        <span>Spring Boot</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/mysql.svg') }}" alt="SQLite3" />
+        <span>SQLite3</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/jetpack-compose.svg') }}" alt="Jetpack Compose" />
+        <span>Jetpack Compose</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/figma.svg') }}" alt="Figma" />
+        <span>Figma</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/github.svg') }}" alt="GitHub" />
+        <span>GitHub</span>
+      </div>
+      
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/material-design.svg') }}" alt="Material Design" />
+        <span>Material Design</span>
+      </div>
+      <div class="tech-item">
+        <img src="{{ url_for('static', filename='tech-icons/api.svg') }}" alt="REST API" />
+        <span>REST APIs</span>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<script>
+document.querySelector('.tech-stack-marquee').addEventListener('click', function() {
+    document.getElementById('techStackModal').style.display = 'flex';
+});
+
+window.onclick = function(event) {
+    var modal = document.getElementById('techStackModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
+</script>
 {% endblock %}
